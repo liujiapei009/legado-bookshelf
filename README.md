@@ -4,21 +4,29 @@
 
 ## 书单清单
 
-| 文件 | 对应书单 | 条目 | 核对清单 |
+| 文件 | 对应书单 | 条目 | 核对清单（仅供人工核对，不用于导入） |
 | --- | --- | --- | --- |
 | `genre-98.json` | 题材书单（都市恋爱、日常、病娇与特殊题材等） | 98 | `genre-98.txt` |
 | `ranking-nov2026-119.json` | 11月口碑增量榜（2026） | 119 | `ranking-nov2026-119.txt` |
 
-## 在阅读 App 中订阅
+## 订阅链接（在阅读 App「网络导入 / 订阅书单 / 导入书单」粘贴）
 
-在书架 / 我的里找到「网络导入 / 订阅书单 / 导入书单」，粘贴对应 `.json` 的 raw 直链或 CDN 镜像直链即可。若 `.json` 后缀识别不稳，可使用同目录同名 `.txt` 清单对应的链接，或在 App 内改后缀重试。
+优先使用 fastly 镜像；不通时换 gcore 备用镜像。raw 主域在部分国内网络直连不稳，仅作备用。
 
-> 链接以本仓库实际地址为准，建仓后在下方「订阅链接」一节回填。
+### 题材书单（98 本）
 
-## 订阅链接
+- 主（fastly）：`https://fastly.jsdelivr.net/gh/liujiapei009/legado-bookshelf@main/genre-98.json`
+- 备（gcore）：`https://gcore.jsdelivr.net/gh/liujiapei009/legado-bookshelf@main/genre-98.json`
+- raw 备用：`https://raw.githubusercontent.com/liujiapei009/legado-bookshelf/main/genre-98.json`
 
-（建仓后回填：raw 地址、fastly / gcore 镜像地址各一份。）
+### 11月口碑增量榜（119 本）
+
+- 主（fastly）：`https://fastly.jsdelivr.net/gh/liujiapei009/legado-bookshelf@main/ranking-nov2026-119.json`
+- 备（gcore）：`https://gcore.jsdelivr.net/gh/liujiapei009/legado-bookshelf@main/ranking-nov2026-119.json`
+- raw 备用：`https://raw.githubusercontent.com/liujiapei009/legado-bookshelf/main/ranking-nov2026-119.json`
+
+> 若 App 对 `.json` 后缀识别不稳，可改用同目录同名 `.txt` 镜像链接，或在 App 内改后缀重试；导入以 `.json` 为准。
 
 ## 更新方式
 
-电脑端生成新书单 JSON 后，复制到本目录、提交并推送到 `main` 分支；直链地址保持不变，手机端重新订阅或刷新即可拉到最新内容。
+电脑端生成新书单 JSON 后，复制到本目录、提交并推送到 `main` 分支；上面的链接地址保持不变，手机端重新订阅或刷新即可拉到最新内容。
